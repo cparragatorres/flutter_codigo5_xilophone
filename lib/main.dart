@@ -1,12 +1,10 @@
-
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-
-void main(){
+void main() {
   runApp(
     MyApp(),
   );
-
 }
 
 class MyApp extends StatelessWidget {
@@ -21,26 +19,43 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+  AudioCache audioCache = AudioCache();
+
+  void playNote(int number){
+    audioCache.play("audios/note$number.wav");
+  }
+
+  Widget bullkey(int numberNote, Color colorcito){
+    return Expanded(
+      child: Container(
+        color: colorcito,
+        child: TextButton(
+          onPressed: () {
+            playNote(numberNote);
+          },
+          child: const Text(""),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("XilophoneApp"),
+        title: const Text("XilophoneApp"),
         centerTitle: true,
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: (){
-
-          },
-          child: Text("Click!"),
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          bullkey(1, Colors.black),
+          bullkey(2, Colors.pink),
+          bullkey(3, Colors.black12),
+        ],
       ),
     );
   }
