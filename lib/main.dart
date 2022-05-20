@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -26,6 +27,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text("XilophoneApp"),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: (){
+
+          },
+          child: Text("Click!"),
+        ),
+      ),
+    );
   }
 }
