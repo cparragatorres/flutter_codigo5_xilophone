@@ -52,9 +52,13 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          bullkey(1, Colors.black),
-          bullkey(2, Colors.pink),
-          bullkey(3, Colors.black12),
+          bullkey(1, Colors.indigo),
+          bullkey(2, Colors.lightBlue),
+          bullkey(3, Colors.purpleAccent),
+          bullkey(4, Colors.red),
+          bullkey(5, Colors.orangeAccent),
+          bullkey(6, Colors.amberAccent),
+          bullkey(7, Colors.greenAccent),
         ],
       ),
     );
