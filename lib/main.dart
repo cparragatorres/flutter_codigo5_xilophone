@@ -57,8 +57,9 @@ class HomePage extends StatelessWidget {
           bullkey(3, Colors.purpleAccent),
           bullkey(4, Colors.red),
           bullkey(5, Colors.orangeAccent),
-          bullkey(7, Colors.greenAccent),
           bullkey(6, Colors.amberAccent),
+          bullkey(7, Colors.greenAccent),
+
 
 
 
