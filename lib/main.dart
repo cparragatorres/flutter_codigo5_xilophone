@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
     audioCache.play("audios/note$number.wav");
   }
 
-  Widget bullkey(int numberNote, Color colorcito){
+  Widget bullkey({required int numberNote,required Color colorcito}){
     return Expanded(
       child: Container(
         color: colorcito,
@@ -52,17 +52,13 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          bullkey(1, Colors.indigo),
-          bullkey(2, Colors.lightBlue),
-          bullkey(3, Colors.purpleAccent),
-          bullkey(4, Colors.red),
-          bullkey(5, Colors.orangeAccent),
-          bullkey(6, Colors.amberAccent),
-          bullkey(7, Colors.greenAccent),
-
-
-
-
+          bullkey(numberNote: 1,colorcito: Colors.indigo),
+          bullkey(numberNote: 2,colorcito: Colors.lightBlue),
+          bullkey(numberNote:3, colorcito: Colors.purpleAccent),
+          bullkey(numberNote:4, colorcito: Colors.red),
+          bullkey(numberNote:5, colorcito: Colors.orangeAccent),
+          bullkey(numberNote:6, colorcito: Colors.amberAccent),
+          bullkey(numberNote:7, colorcito: Color(0xff69f0ae)),
         ],
       ),
     );
